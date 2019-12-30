@@ -156,10 +156,16 @@ class Facility:
 #          Cargo('D', 'A', '6'), Cargo('D', 'B', '7')]
 
 # ABB BAB AAA BBB
-cargo_list = [Cargo('D', 'A', '0'), Cargo('D', 'B', '1'), Cargo('D', 'B', '2'),
-          Cargo('D', 'B', '3'), Cargo('D', 'A', '4'), Cargo('D', 'B', '5'),
-          Cargo('D', 'A', '6'), Cargo('D', 'A', '7'), Cargo('D', 'A', '8'),
-          Cargo('D', 'B', '9'), Cargo('D', 'B', '10'), Cargo('D', 'B', '11')]
+#cargo_list = [Cargo('D', 'A', '0'), Cargo('D', 'B', '1'), Cargo('D', 'B', '2'),
+#          Cargo('D', 'B', '3'), Cargo('D', 'A', '4'), Cargo('D', 'B', '5'),
+#          Cargo('D', 'A', '6'), Cargo('D', 'A', '7'), Cargo('D', 'A', '8'),
+#          Cargo('D', 'B', '9'), Cargo('D', 'B', '10'), Cargo('D', 'B', '11')]
+
+cargo_list = []
+
+input_list = list(sys.argv[1])
+for char in input_list:
+    cargo_list.append(Cargo('D', char, 'dummy'))
 
 facilities = {'A': Facility('A'), 'B': Facility('B'), 'C': Facility('C'), 'D': Facility('D')}
 
